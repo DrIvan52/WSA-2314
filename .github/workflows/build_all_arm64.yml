@@ -120,6 +120,8 @@ jobs:
         run: |
           mkdir -p download
           ./scripts/build.sh --custom-model redfin --arch arm64 --release-type WIF --gapps-brand MindTheGapps --root-sol magisk --magisk-ver stable --remove-amazon --compress-format zip
+        env:
+          API_KEY: ${{ secrets.PAT }}
 
       - name: Check If Need Upload 🤔
         id: check
@@ -255,6 +257,8 @@ jobs:
         run: |
           mkdir -p download
           ./scripts/build.sh --custom-model redfin --arch arm64 --release-type WIF --gapps-brand MindTheGapps --root-sol magisk --magisk-ver delta --remove-amazon --compress-format zip
+        env:
+          API_KEY: ${{ secrets.PAT }}
 
       - name: Check If Need Upload 🤔
         id: check
@@ -390,6 +394,8 @@ jobs:
         run: |
           mkdir -p download
           ./scripts/build.sh --custom-model redfin --arch arm64 --release-type WIF --gapps-brand none --root-sol magisk --magisk-ver stable --remove-amazon --compress-format zip
+        env:
+          API_KEY: ${{ secrets.PAT }}
 
       - name: Check If Need Upload 🤔
         id: check
@@ -525,6 +531,8 @@ jobs:
         run: |
           mkdir -p download
           ./scripts/build.sh --custom-model redfin --arch arm64 --release-type WIF --gapps-brand none --root-sol magisk --magisk-ver delta --remove-amazon --compress-format zip
+        env:
+          API_KEY: ${{ secrets.PAT }}
 
       - name: Check If Need Upload 🤔
         id: check
